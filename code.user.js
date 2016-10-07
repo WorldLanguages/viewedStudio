@@ -26,6 +26,7 @@ var id1 = url.substring(33, 45);
 var id = id1.replace(/\D/g,'');
 console.log('Project id: '+id);
 
+$.ajax({type: "PUT",url: "https://scratch.mit.edu/site-api/projects/in/" + sid + "/add/?remove=" + id,data: "pks=" + id});
 $.ajax({type: "PUT",url: "https://scratch.mit.edu/site-api/projects/in/" + sid + "/add/?pks=" + id,data: "pks=" + id});
 
 
